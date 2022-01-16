@@ -22,7 +22,7 @@ extension View {
 
 #if canImport(UIKit)
 extension View {
-    func hideKeyboard() {
+    public func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
@@ -30,7 +30,7 @@ extension View {
 
 
 extension View {
-    func sideMenu<MenuContent: View>(
+    public func sideMenu<MenuContent: View>(
         isShowing: Binding<Bool>,
         @ViewBuilder menuContent: @escaping () -> MenuContent
     ) -> some View {
