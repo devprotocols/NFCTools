@@ -27,10 +27,9 @@ extension String {
     }
 
     public func localized() -> String {
-        let path = Bundle.main.path(forResource: UserDefaults.standard.string(forKey: "language"), ofType: "lproj")
-        guard let path = path else {return ""}
-        guard let bundle = Bundle(path: path) else {return ""}
-        return NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
+        let path = Bundle.main.path(forResource: UserDefaults.language, ofType: "lproj")
+        let bundle = Bundle(path: path!)
+        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
     }
     
 }
