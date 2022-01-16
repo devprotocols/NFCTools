@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol BaseCodable: Codable, Equatable {
-  var id: String { get set }
+  var id: String? { get set }
 }
