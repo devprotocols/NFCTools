@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-extension Color {
+public extension Color {
     public static var primaryColor: Color {
         return Color(UIColor(named: "PrimaryColor")!)
     }
