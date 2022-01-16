@@ -9,7 +9,7 @@ import SDWebImageSwiftUI
 import SwiftUI
 
 extension Image {
-    func circleImageModifier(width: CGFloat = 200, height: CGFloat = 200, padding: CGFloat = 0, backgroundColor: Color = Color.white, foregroundColor: Color = .black) -> some View {
+    public func circleImageModifier(width: CGFloat = 200, height: CGFloat = 200, padding: CGFloat = 0, backgroundColor: Color = Color.white, foregroundColor: Color = .black) -> some View {
         self
             .resizable()
             .frame(width: width, height: height)
@@ -23,7 +23,7 @@ extension Image {
 }
 
 extension WebImage {
-    func circleImageModifier(width: CGFloat = 200, height: CGFloat = 200, padding: CGFloat = 0) -> some View {
+    public func circleImageModifier(width: CGFloat = 200, height: CGFloat = 200, padding: CGFloat = 0) -> some View {
         self
             .resizable()
             .placeholder(Image(systemName: "person"))
