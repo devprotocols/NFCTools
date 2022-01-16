@@ -8,6 +8,10 @@
 import Foundation
 import SwiftUI
 
+public enum RecordType {
+    case text, url
+}
+
 public enum FieldType{
     case email, username, password, fullname
     
@@ -61,3 +65,4 @@ public func detectDirection(value: DragGesture.Value) -> SwipeHVDirection {
     }
     return .none
 }
+
