@@ -11,4 +11,9 @@ public struct PickerPayload : Identifiable{
     public var id = UUID()
     public var type : RecordType
     public var pickerMessage : String
+    
+    public init(type: RecordType, pickerMessage: String){
+        self.type = type
+        self.pickerMessage = pickerMessage
+    }
 }
