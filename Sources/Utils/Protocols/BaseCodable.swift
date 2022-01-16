@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol BaseCodable: AnyObject, Equatable {
+public protocol BaseCodable: Codable, Equatable {
   var id: String { get set }
 }
