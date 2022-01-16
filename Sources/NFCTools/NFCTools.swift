@@ -1,3 +1,4 @@
+
 public struct NFCTools {
     public private(set) var text = "Hello, World!"
 
