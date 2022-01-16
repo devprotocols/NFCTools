@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 
 extension UINavigationController: UIGestureRecognizerDelegate {
-    public override open func viewDidLoad() {
+    open override open func viewDidLoad() {
         super.viewDidLoad()
         interactivePopGestureRecognizer?.delegate = self
     }
     
-    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         return viewControllers.count > 1
     }
 }

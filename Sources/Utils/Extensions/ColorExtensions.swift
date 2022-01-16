@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 
 extension Color {
-    public static var primaryColor: Color {
+    open static var primaryColor: Color {
         return Color(UIColor(named: "PrimaryColor")!)
     }
-    public static var secondaryColor: Color {
+    open static var secondaryColor: Color {
         return Color(UIColor(named: "SecondaryColor")!)
     }
 }
