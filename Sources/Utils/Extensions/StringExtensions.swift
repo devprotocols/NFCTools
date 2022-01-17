@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+import CoreImage.CIFilterBuiltins
+import SwiftUI
 
 extension String {
 
@@ -41,6 +42,21 @@ extension String {
             return self
         }
         return NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
+    }
+    
+    
+    public func generateQRCode() -> UIImage? {
+        let data = Data(self.utf8)
+        let filter = CIFilter.qrCodeGenerator()
+        let context = CIContext()
+        filter.setValue(data, forKey: "inputMessage")
+
+        if let outputImage = filter.outputImage {
+            if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+                return UIImage(cgImage: cgimg)
+            }
+        }
+        return nil
     }
     
 }
