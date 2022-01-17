@@ -19,6 +19,7 @@ public struct NFCButton : UIViewRepresentable {
     public func makeUIView(context: UIViewRepresentableContext<NFCButton>) -> UIButton {
         let button = UIButton()
         button.setTitle(AppStrings.readTap.localized(), for: .normal)
+        button.contentHorizontalAlignment = .left
         button.backgroundColor = UIColor.black
         button.addTarget(context.coordinator, action: #selector(context.coordinator.beginScan(_:)), for: .touchUpInside)
 
