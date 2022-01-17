@@ -22,7 +22,10 @@ extension String {
         return pred.evaluate(with: self)
     }
     
-    public func toURL() -> URL? {
+    public func toURL(isUrl: Bool? = false) -> URL? {
+        if (isUrl && !self.hasPrefix("http") ) {
+            self = "https://www." + self
+        }
         return URL(string: self)
     }
 
