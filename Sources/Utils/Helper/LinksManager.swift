@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class LinksManager {
     static let shared: LinksManager = LinksManager()

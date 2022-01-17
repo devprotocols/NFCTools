@@ -23,10 +23,11 @@ extension String {
     }
     
     public func toURL(isUrl: Bool? = false) -> URL? {
-        if (isUrl && !self.hasPrefix("http") ) {
-            self = "https://www." + self
+        var urlString = self
+        if ((isUrl ?? false) && !self.hasPrefix("http") ) {
+            urlString = "https://www." + self
         }
-        return URL(string: self)
+        return URL(string: urlString)
     }
 
     public func localized() -> String {
