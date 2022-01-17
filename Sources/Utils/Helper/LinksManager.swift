@@ -8,10 +8,10 @@
 import Foundation
 import SwiftUI
 
-class LinksManager {
-    static let shared: LinksManager = LinksManager()
+public class LinksManager {
+    public static let shared: LinksManager = LinksManager()
     
-    func openURL(iOSURL: URL?, webURL: URL?) {
+    public func openURL(iOSURL: URL?, webURL: URL?) {
         if let iOSURL = iOSURL {
             if UIApplication.shared.canOpenURL(iOSURL) {
                 UIApplication.shared.open(iOSURL)
