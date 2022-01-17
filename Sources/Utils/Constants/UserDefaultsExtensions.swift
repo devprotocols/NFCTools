@@ -10,10 +10,10 @@ import Foundation
 extension UserDefaults {
     public static var language: String {
         get {
-            return UserDefaults.standard.string(forKey: AppKeys.isAuthenticated) ?? "en"
+            return UserDefaults.standard.string(forKey: AppKeys.language) ?? "en"
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: AppKeys.isAuthenticated)
+            UserDefaults.standard.set(newValue, forKey: AppKeys.language)
         }
     }
     public static var isAuthenticated: Bool {

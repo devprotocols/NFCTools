@@ -69,7 +69,6 @@ public struct NFCButton : UIViewRepresentable {
             }
 
             let array = payload.components(separatedBy: "/")
-            UserDefaults.openProfile = array.last ?? ""
             self.data = array.last ?? ""
         }
         @objc public func beginScan(_ sender: Any) {
