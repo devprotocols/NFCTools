@@ -223,27 +223,27 @@ public struct CustomPickerTextField : UIViewRepresentable {
         
         private let parent : CustomPickerTextField
         
-        init(textfield : CustomPickerTextField) {
+        public init(textfield : CustomPickerTextField) {
             self.parent = textfield
         }
         
-        func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        public func numberOfComponents(in pickerView: UIPickerView) -> Int {
             return 1
         }
-        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
             return self.parent.data.count
         }
-        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
             return self.parent.data[row].localized()
         }
-        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
             self.parent.$selectionIndex.wrappedValue = row+1
             
             self.parent.text = self.parent.data[row].localized()
             self.parent.textField.endEditing(true)
             
         }
-        func textFieldDidEndEditing(_ textField: UITextField) {
+        public func textFieldDidEndEditing(_ textField: UITextField) {
             self.parent.textField.resignFirstResponder()
         }
     }
