@@ -78,7 +78,7 @@ extension UserDefaults {
         }
     }
     
-    static var latitude: Double {
+    public static var latitude: Double {
         get {
             return UserDefaults.standard.double(forKey: AppKeys.latitude)
         }
@@ -87,7 +87,7 @@ extension UserDefaults {
         }
     }
     
-    static var longitude: Double {
+    public static var longitude: Double {
         get {
             return UserDefaults.standard.double(forKey: AppKeys.longitude)
         }
@@ -96,7 +96,7 @@ extension UserDefaults {
         }
     }
     
-    static var isPro: Bool {
+    public static var isPro: Bool {
         get {
             return UserDefaults.standard.bool(forKey: AppKeys.isPro)
         }
