@@ -176,7 +176,7 @@ public struct DatePickerTextField: UIViewRepresentable {
 }
 
 
-struct CustomPickerTextField : UIViewRepresentable {
+public struct CustomPickerTextField : UIViewRepresentable {
     
     var data : [String]
     var placeholder : String
