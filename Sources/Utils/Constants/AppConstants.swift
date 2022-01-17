@@ -17,6 +17,9 @@ public class AppKeys {
     public static let isTap = "isTap"
     public static let refresh = "refresh"
     public static let language = "language"
+    public static let latitude = "latitude"
+    public static let longitude = "longitude"
+    public static let isPro = "isPro"
 }
 
 public class AppStrings {

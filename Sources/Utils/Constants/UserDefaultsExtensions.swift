@@ -77,4 +77,31 @@ extension UserDefaults {
             UserDefaults.standard.set(newValue, forKey: AppKeys.refreshToken)
         }
     }
+    
+    static var latitude: Double {
+        get {
+            return UserDefaults.standard.double(forKey: AppKeys.latitude)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: AppKeys.latitude)
+        }
+    }
+    
+    static var longitude: Double {
+        get {
+            return UserDefaults.standard.double(forKey: AppKeys.longitude)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: AppKeys.longitude)
+        }
+    }
+    
+    static var isPro: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: AppKeys.isPro)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: AppKeys.isPro)
+        }
+    }
 }
