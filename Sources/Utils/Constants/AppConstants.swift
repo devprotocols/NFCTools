@@ -20,6 +20,7 @@ public class AppKeys {
     public static let latitude = "latitude"
     public static let longitude = "longitude"
     public static let isPro = "isPro"
+    public static let isVerified = "isVerified"
 }
 
 public class AppStrings {

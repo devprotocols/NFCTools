@@ -104,4 +104,12 @@ extension UserDefaults {
             UserDefaults.standard.set(newValue, forKey: AppKeys.isPro)
         }
     }
+    public static var isVerified: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: AppKeys.isVerified)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: AppKeys.isVerified)
+        }
+    }
 }
