@@ -11,7 +11,10 @@ public struct CustomCorner: Shape{
     
     public var corners: UIRectCorner
     public var radius: CGFloat
-    
+    public init(corners: UIRectCorner, radius: CGFloat){
+        self.corners = corners
+        self.radius = radius
+    }
     public func path(in rect: CGRect) -> Path {
         
         let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
@@ -26,6 +29,14 @@ public struct RoundedCorners: View {
     public var tr: CGFloat = 0.0
     public var bl: CGFloat = 0.0
     public var br: CGFloat = 0.0
+    
+    public init(color: Color = .blue, tl: CGFloat = 0.0, tr: CGFloat = 0.0, bl: CGFloat = 0.0, br: CGFloat = 0.0){
+        self.color = color
+        self.tl = tl
+        self.tr = tr
+        self.bl = bl
+        self.br = br
+    }
     
     public var body: some View {
         GeometryReader { geometry in

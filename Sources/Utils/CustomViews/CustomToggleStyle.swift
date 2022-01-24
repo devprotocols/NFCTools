@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 public struct CustomToggleStyle: ToggleStyle {
+    public init(){}
     public func makeBody(configuration: Configuration) -> some View {
         HStack {
             configuration.label
@@ -30,6 +31,7 @@ public struct CustomToggleStyle: ToggleStyle {
 }
 
 public struct CheckToggleStyle: ToggleStyle {
+    public init(){}
     public func makeBody(configuration: Configuration) -> some View {
         Button {
             configuration.isOn.toggle()
